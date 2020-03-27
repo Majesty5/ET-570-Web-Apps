@@ -1,0 +1,99 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+	<title>jQuery UI Accordion Example</title>
+	<!-- These 2 lines would be included if jquery were hosted locally
+	<script src="jquery-1.12.4.js"></script>
+     <script src="jquery-ui.js"></script> -->
+
+     <!-- Links to jQuery CDNs -->
+     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+	<script>
+    $(document).on('ready', function(){
+        $("#accordion").accordion();
+    });
+</script>
+<style type="text/css">
+	header {text-align: center;
+  }
+  body {
+  	background-image: url('bjack013.jpg');
+  	background-repeat:repeat-y;
+  	background-color: #FFF;
+  	font-family: Arial, Helvetica, sans-serif;
+  	color: #000;
+  	margin-left:150px
+  }
+</style>
+</head>
+<body>
+<header>
+<h1>Screenplay</h1>
+
+<h2>Act 2 Scene 3 The Job Interview</h2>
+
+<h3>Film context: In this scene our college grad shows her/his poise and subject knowledge of front-end web design and gets the job</h3>
+
+<p>
+<img alt="" height="128" src="smile.jpg" width="162" /></p>
+</header>
+
+<hr />
+
+<div id="accordion">
+<h3>Question 1:<br />
+Interviewer: So, I see from your college transcript that you studied web design...</h3>
+
+<div>
+<p>
+It was my first time touch web design. I like it.
+</p>
+</div>
+
+<h3>Question 2:<br />
+Interviewer: Tell me about the roles of HTML, CSS and javascript</h3>
+
+<div>
+<p>
+They are a kind of a lauguage to build a web. </p>
+</div>
+
+<h3>Question 3:<br />
+Was it largely a theory class or was there much hands-on?</h3>
+
+<div>
+<p>
+
+</p>
+</div>
+
+<h3>Question 4:<br />
+Interviewer: Did you invest much time in developing a web portfolio?</h3>
+
+<div>
+<p>
+Because I like it ,so I enjoy the time that I developing them.
+</p>
+
+</div>
+
+<h3>Question 5:<br />
+Interviewer:
+What do you think about web design before and after you took this class?</h3>
+
+<div>
+<p>
+I will choose aother web desigh class to study more technology.
+</p>
+</div>
+</div>
+<script src="jquery-1.12.4.js"></script>
+<script src="jquery-ui.js"></script>
+
+</body>
+</html>
