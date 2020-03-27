@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<!-- ET 570 Day 2 Lab 2 --- Monday, February 3, 2020 -->
+<head>
+<title>Rashida Thomas Counts</title>
+<style style="text/css">
+
+.lcdstyle{ /*Example CSS to create LCD countdown look*/
+	background-color:black;
+	color:yellow;
+	font: bold 18px MS Sans Serif;
+	padding: 3px;
+}
+
+.lcdstyle sup{ /*Example CSS to create LCD countdown look*/
+	font-size: 80%
+}
+
+</style>
+
+<script type="text/javascript" src="countdown.js">
+
+/***********************************************
+* Dynamic Countdown script- (c) Dynamic Drive (http://www.dynamicdrive.com)
+* Please keep this notice intact
+* Visit http://www.dynamicdrive.com/ for this script and 100s more.
+***********************************************/
+
+</script>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+
+<h2>Example 1:</h2>
+
+<div id="countdowncontainer"></div>
+
+<script>
+
+var countdowncontainer = document.getElementById('countdowncontainer') // reference container 
+
+var futuredate = new cdtime("May 18, 2020 21:00:00")
+futuredate.oncountdown = function(ms){
+	if (ms <= 0){ // if time's up
+		countdowncontainer.innerHTML = "Future Date is Here!" // do something
+	}
+	else{
+		var timeleft = cdtime.formatDuration(ms, "days") // format time using formatDuration(timeleftms, "baseunit") function
+		countdowncontainer.innerHTML = timeleft.days + ' Days ' + timeleft.hours + ' Hours ' + timeleft.minutes + ' Minutes ' + timeleft.seconds + ' Seconds '
+	}
+}
+futuredate.start()
+
+</script>
+
+
+<h2>Example 2 (Dynamic Year):</h2>
+
+<div id="christmascontainer"></div>
+
+<script>
+
+var christmascontainer = document.getElementById('christmascontainer') // reference container 
+
+var currentyear = new Date().getFullYear()
+//dynamically get this Christmas' year value. If Christmas already passed, then year=current year+1
+var christmasyear = (new Date().getMonth()>=11 && new Date().getDate()>25)? currentyear+1 : currentyear
+
+var christmascountdown = new cdtime("May 18, " + christmasyear + " 21:00:00")
+
+christmascountdown.oncountdown = function(ms){
+	if (ms <= 0){ // if time's up
+		countdowncontainer2.innerHTML = "Christmas is Upon Us!" // do something
+	}
+	else{
+		var timeleft = cdtime.formatDuration(ms, "days") // format time using formatDuration(timeleftms, "baseunit") function
+		christmascontainer.innerHTML = "<span class='lcdstyle'>" + timeleft.days + " <sup>days</sup> " + timeleft.hours + " <sup>hours</sup> " + timeleft.minutes + " <sup>minutes</sup> " + timeleft.seconds + " <sup>seconds</sup></span> left until the end of the last day of ET 570 class."
+	}
+}
+christmascountdown.start()
+
+</script>
+</body>
+</html>
